@@ -35,8 +35,10 @@ class Record:
         phone_obj = self.find_phone(old_phone)
         if not phone_obj:
             raise ValueError("Phone number not found.")
-        self.remove_phone(old_phone)
         self.add_phone(new_phone)
+        self.remove_phone(old_phone)
+
+        
 
     def find_phone(self, phone):
         for p in self.phones:
