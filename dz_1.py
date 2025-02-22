@@ -8,7 +8,6 @@ class Field:
         return str(self.value)
 
 class Name(Field):
-    # реалізація класу
 		pass
 
 class Phone(Field):
@@ -71,7 +70,7 @@ john_record = Record("John")
 john_record.add_phone("1234567890")
 john_record.add_phone("5555555555")
 
-    # Додавання запису John до адресної книги
+# Додавання запису John до адресної книги
 book.add_record(john_record)
 
     # Створення та додавання нового запису для Jane
@@ -86,11 +85,11 @@ print(book)
 john = book.find("John")
 john.edit_phone("1234567890", "1112223333")
 
-print(john)  # Виведення: Contact name: John, phones: 1112223333; 5555555555
+print(john) # Виведення: Contact name: John, phones: 1112223333; 5555555555
 
-    # Пошук конкретного телефону у записі John
+# Пошук конкретного телефону у записі John
 found_phone = john.find_phone("5555555555")
 print(f"{john.name}: {found_phone}")  # Виведення: John: 5555555555
 
-    # Видалення запису Jane
+ # Видалення запису Jane
 book.delete("Jane")
